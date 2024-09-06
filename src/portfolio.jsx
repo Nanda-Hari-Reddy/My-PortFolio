@@ -27,11 +27,11 @@ const Portfolio = () => {
   };
 
   const skills = [
-    { name: 'JavaScript', level: 100 },
-    { name: 'React', level: 100 },
-    { name: 'Node.js', level: 100 },
-    { name: 'Python', level: 100 },
-    { name: 'SQL', level: 50 },
+    { name: 'JavaScript', level: 50 },
+    { name: 'React', level: 50 },
+    { name: 'Node.js', level: 20 },
+    { name: 'Java', level: 100 },
+    { name: 'SQL', level: 80 },
   ];
 
   const getColorClass = (level) => {
