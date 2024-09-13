@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { FaGithub, FaLinkedin, FaEnvelope, FaDownload, FaTwitter} from 'react-icons/fa';
+import { SiLeetcode } from "react-icons/si";
+import { BiLogoGmail } from "react-icons/bi";
 import { motion } from 'framer-motion';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import profile from './images/profile.jpg'
+import  profile_1  from './images/profile_1.jpg'
 gsap.registerPlugin(ScrollTrigger);
 
 const Portfolio = () => {
@@ -15,23 +17,32 @@ const Portfolio = () => {
   const [isHovered, setIsHovered] = useState(false);
 
   const teamMember = {
-    name: 'Jane Doe',
-    role: 'Senior Frontend Developer',
-    bio: 'Passionate about creating beautiful and functional web experiences. With over 5 years of experience in React and modern CSS frameworks, I strive to build accessible and performant applications.',
-    image: profile ,
+    name: 'Nanda Hari Reddy',
+    role: 'Java Full Stack Developer',
+    bio: 'I’m a Full Stack Java Developer with 1 year hands on experience in building scalable, high-performance web applications. My expertise spreads across backend development with Java and Spring Boot, as well as creating intuitive frontends using React and JavaScript. I specialize in REST APIs, microservices architecture, and database management, delivering end-to-end solutions that are both user-friendly and robust. Passionate about solving complex problems and continuously learning new technologies, I thrive in dynamic environments where I can contribute to both backend logic and frontend design.',
+    image: profile_1 ,
     social: {
-      linkedin: 'https://linkedin.com/in/janedoe',
+      linkedin: 'https://www.linkedin.com/in/nanda-hari-reddy/',
       twitter: 'https://twitter.com/janedoe',
-      github: 'https://github.com/janedoe'
+      github: 'https://github.com/Nanda-Hari-Reddy',
+      leetcode: 'https://leetcode.com/u/bknandahari2000/',
     }
   };
 
   const skills = [
-    { name: 'JavaScript', level: 50 },
-    { name: 'React', level: 50 },
-    { name: 'Node.js', level: 20 },
     { name: 'Java', level: 100 },
+    { name: 'Spring Boot', level: 90 },
+    { name: 'DSA', level: 80 },
+    { name: 'REST APIs', level: 90 },
+    { name: 'Microservices', level: 50 },
     { name: 'SQL', level: 80 },
+    { name: 'JavaScript', level:60 },
+    { name: 'React', level: 60 },
+    { name: 'HTML', level: 80 },
+    { name: 'CSS', level: 70 },
+    { name: 'GIT', level: 80 },
+    { name: 'Docker', level: 50 },
+    { name: 'AWS EC2 ', level: 100 },
   ];
 
   const getColorClass = (level) => {
@@ -199,7 +210,7 @@ const Portfolio = () => {
             className="text-center"
           >
             <h2 className="text-4xl font-bold mb-4">Welcome to My Portfolio</h2>
-            <p className="text-xl max-w-2xl mx-auto">I'm a passionate developer with expertise in web and mobile technologies. I love creating innovative solutions and bringing ideas to life through code.</p>
+            <p className="text-xl max-w-2xl mx-auto">Passionate Full Stack Java Developer with a strong foundation in building scalable web applications. Expertise in Java, Spring Boot, REST APIs, and modern front-end frameworks. Driven to create efficient, user-friendly solutions from concept to deployment.</p>
           </motion.div>
         </section>
 
@@ -239,6 +250,13 @@ const Portfolio = () => {
               <a href={teamMember.social.github} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-gray-900 transition-colors duration-300">
                 <FaGithub size={24} />
               </a>
+              <a href={teamMember.social.leetcode} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-gray-900 transition-colors duration-300">
+              <SiLeetcode size={24} />
+              </a>
+              <a href= "mailto:bknandahari2000@gmail.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-gray-900 transition-colors duration-300">
+              <BiLogoGmail  size={24} />
+              </a>
+              
             </div>
           </div>
         </div>
